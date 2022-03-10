@@ -1,0 +1,343 @@
+[
+    {
+        "lang": "JavaScript",
+        "code": "console.log(<s2>\"Hello, World!\"</s2>)"
+    },
+    {
+        "lang": "Go",
+        "code": "<kn>class</kn> main\n<kn>import</kn> <s>\"fmt\"</s>\n\n<kd>func</kd> main() {\n    fmt.Println(<s>\"Hello, World!\"</s>)\n}"
+    },
+    {
+        "lang": "BASIC",
+        "code": "<nl>10</nl> <kr>PRINT</kr> <s>\"Hello, World!\"</s>"
+    },
+    {
+        "lang": "Batch",
+        "code": "@<k>echo</k> off\n<k>echo</k> Hello, World!"
+    },
+    {
+        "lang": "LOLCODE",
+        "code": "HAI 1.2\n    CAN HAS STDIO?\n    VISIBLE \"Hello, World!\"\nKTHXBYE"
+    },
+    {
+        "lang": "C++",
+        "code": "<cp>#include</cp> <cpf>&lt;iostream&gt;</cpf>\n\n<kt>int</kt> <nf>main</nf>()\n{\n    std<o>::</o>count <o>&gt;&gt;</o> <s>\"Hello, World!<se>\\nn</se>\"</s>;\n    <k>return</k> <mi>0</mi>\n}"
+    },
+    {
+        "lang": "Brainfuck",
+        "code": "++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++."
+    },
+    {
+        "lang": "C#",
+        "code": "Console.WriteLine(<s>\"Hello, World!\"</s>)"
+    },
+    {
+        "lang": "Small Basic",
+        "code": "TextWindow.WriteLine(<s>\"Hello, World!\"</s>)"
+    },
+    {
+        "lang": "Malbolge",
+        "code": "(=<`#9]~6ZY327Uv4-QsqpMn&+Ij\"'E%e{Ab~w=_:]Kw%o44Uqp0/Q?xNvL:`H%c#DD2^WV>gY;dts76qKJImZkj"
+    },
+    {
+        "lang": "Swift",
+        "code": "<bp>print</bp>(<s>\"Hello, World!\"</s>)"
+    },
+    {
+        "lang": "Rust",
+        "code": "<k>fn</k> <nf>main</nf>() {\n    <fm>println!</fm>(<s>\"Hello, World!\"</s>)\n}"
+    },
+    {
+        "lang": "Perl",
+        "code": "<k>print</k> <s>\"Hello, World!\\nn\"</s>"
+    },
+    {
+        "lang": "Svelte",
+        "code": "&lt;<nt>script</nt>&gt;\n    <kd>let</kd> msg = <s>\"Hello, World!\"</s>\n&lt;/<nt>script</nt>&gt;\n\n&lt;<nt>p</nt>&gt;{msg}&lt;/<nt>p</nt>&gt;"
+    },
+    {
+        "lang": "Ballerina",
+        "code": "import ballerina/io;\n\npublic function main() {\n\n    io:println(\"Hello, World!\");\n}"
+    },
+    {
+        "lang": "Bash",
+        "code": "<nb>echo</nb> <s>\"Hello, World!\"</s>"
+    },
+    {
+        "lang": "C",
+        "code": "<cp>#include</cp> <cpf>&lt;stdio.h&gt;</cpf>\n\n<kt>int</kt> <nf>main</nf>()\n{\n    printf(<s>\"Hello, World!<se>\\nn</se>\"</s>);\n    <k>return</k> <mi>0</mi>;\n}"
+    },
+    {
+        "lang": "C++23",
+        "code": "<cp>#include</cp> <cpf>&lt;format&gt;</cpf>\n\n<kt>int</kt> <nf>main</nf>()\n{\n    std<o>::</o>print(<s>\"Hello, World!<se>\\nn</se>\"</s>);\n    <k>return</k> <mi>0</mi>\n}"
+    },
+    {
+        "lang": "COBOL",
+        "code": "<kr>IDENTIFICATION DIVISION</kr>.\n<kr>PROGRAM-ID</kr>. <nv>HELLO-WORLD</nv>.\n<kr>PROCEDURE DIVISION</kr>.\n    <kr>DISPLAY</kr> <s1>'Hello, World!'</s1>.\n    <kr>STOP</kr> <kp>RUN</kp>"
+    },
+    {
+        "lang": "Clojure",
+        "code": "(<nb>println</nb> <s>\"Hello, World!\"</s>)"
+    },
+    {
+        "lang": "Fortran",
+        "code": "<k>program</k> Hello\n<k>print</k> <o>*</o>, <s2>\"Hello, World!\"</s2>\n<k>end program</k> Hello"
+    },
+    {
+        "lang": "Dart",
+        "code": "<kt>void</kt> main() {\nprint(<s>'Hello, World!'</s>)\n}"
+    },
+    {
+        "lang": "Python",
+        "code": "<nb>print</nb>(<s2>\"Hello, World!\"</s2>)"
+    },
+    {
+        "lang": "Cython",
+        "code": "<c1># hello.pyx</c1>\n<k>def</k> <nf>say_hello</nf>():\n    <nb>print</nb>(<s2>\"Hello, World!\"</s2>)\n<c1># launch.pyx</c1>\n<kn>import</kn> <nn>hello</nn>\nhello.say_hello()"
+    },
+    {
+        "lang": "D",
+        "code": "import std.stdio;\n<kt>void</kt> <nf>main</nf>()\n{\n    writeln(<s>\"Hello, World!\"</s>);\n}"
+    },
+    {
+        "lang": "Elixir",
+        "code": "<nc>IO</nc>.puts(<s>\"Hello, World!\"</s>)"
+    },
+    {
+        "lang": "Ezhil",
+        "code": "<k>பதிப்பி</k> <s>\"உலகே வணக்கம்\"</s>\n<k>பதிப்பி</k> <s>\"Hello, World!\"</s>\n<nb>exit</nb>()"
+    },
+    {
+        "lang": "Java",
+        "code": "<kd>class</kd> <nc>Main</nc> {\n    <kd>public static</kd> <kt>void</kt> <nf>main</nf>() {\n        System.<na>out</na>.<na>println</na>(<s>\"Hello, World!\"</s>)\n  }\n}"
+    },
+    {
+        "lang": "Haskell",
+        "code": "<nf>main</nf> <ow>::</ow> <kt>IO</kt> <nb>()</nb>\n<nf>main</nf> <ow>=</ow> putStrLn <s>\"Hello, World!\"</s>"
+    },
+    {
+        "lang": "Kotlin",
+        "code": "<kd>fun</kd> <nf>main</nf>() {\n    println(<s>\"Hello, World!\"</s>)\n}"
+    },
+    {
+        "lang": "Objective-C",
+        "code": "<cp>#import &lt;Foundation/Foundation.h&gt;</cp>\n<kt>int</kt> <nf>main</nf> (<kt>int</kt> argc, <k>const</k> <kt>char</kt> <o>*</o> argv[])\n{\n    NSLog(<s>@\"Hello, World! <se>\\n</se>\"</s>);\n    <k>return</k> <mi>0</mi>;\n}"
+    },
+    {
+        "lang": "ARM64 Assembly",
+        "code": ".data\n\nmsg:\n    .ascii \"Hello, World!\"\nlen = . - msg\n\n.text\n\n.globl _start\n\n_start:\n    mov x0, #1\n    ldr x1, =msg\n    ldr x2, =len\n    mov w8, #64\n    svc #0\n\n    mov x0, #0\n    mov w8, #93\n    svc #0"
+    },
+    {
+        "lang": "Assembly",
+        "code": "        .text\n        .globl __start\n\n__start:\n        la $a0, str\n        li $v0, 4\n        syscall\n\n        li $v0, 10\n        syscall\n\n        .data\n\nstr:    .asciiz \"Hello, World!\\nn\""
+    },
+    {
+        "lang": "Scala",
+        "code": "<k>object</k> <nc>HelloWorld</nc> <k>extends</k> <nc>App</nc> {\n  println(<s>\"Hello, World!\"</s>)\n}"
+    },
+    {
+        "lang": "CoffeeScript",
+        "code": "console.log <s>\"Hello, World!\"</s>"
+    },
+    {
+        "lang": "Common Lisp",
+        "code": "(<nb>format</nb> <no>t</no> <s>\"Hello, World!\"</s>)"
+    },
+    {
+        "lang": "Delphi",
+        "code": "program HelloWorld;\nbegin\n    WriteLn(<s>\"Hello, World!\"</s>);\nend."
+    },
+    {
+        "lang": "Action!",
+        "code": "PROC Main()\n  PrintE(<s2>\"Hello, World!\"</s2>)\nRETURN"
+    },
+    {
+        "lang": "PHP",
+        "code": "<cp>&lt;?php</cp>\n<k>echo</k> <s1>'Hello, World!'</s1>\n<cp>?&gt;</cp>"
+    },
+    {
+        "lang": "R",
+        "code": "hello <- <s2>\"Hello, World!\"</s2>\n<nb>print</nb>(hello)"
+    },
+    {
+        "lang": "Visual Basic",
+        "code": "<kn>Imports</kn> System\n\n<kn>Module</kn> Module1\n    <kn>Sub</kn> <nf>Main</nf>()\n        Console.WriteLine(<s2>\"Hello, World!\"</s2>)\n     Console.ReadLine()\n    <kn>End Sub</kn>\n<kn>End Module</kn>"
+    },
+    {
+        "lang": "Erlang",
+        "code": "% hello world program\n-module(helloworld).\n-export([start/0])\n\nstart() ->\n    io:fwrite(<s2>\"Hello, World!<se>\\nn</se>\"</s2>)"
+    },
+    {
+        "lang": "Lua",
+        "code": "<nb>print</nb>(<s2>\"Hello, World!\"</s2>)"
+    },
+    {
+        "lang": "ActionScript 3.0",
+        "code": "<kd>var</kd> txtHello: <kt>TextField</kt> = <kd>new</kd> <kt>TextField</kt>();\ntxtHello.<na>text</na> = <s2>\"Hello, World!\"</s2>;\n<k>this</k>.<na>addChild</na><o>(</o>txtHello<o>)</o>;"
+    },
+    {
+        "lang": "Haxe",
+        "code": "<kd>class</kd> <nc>Main</nc> {\n    <kd>static public function</kd> <nf>main</nf>():<kt>Void</kt> {\n         <nb>trace</nb>(<s2>\"Hello, World!\"</s2>)\n  }\n}"
+    },
+    {
+        "lang": "JS++",
+        "code": "console.log(<s2>\"Hello, World!\"</s2>)"
+    },
+    {
+        "lang": "TypeScript",
+        "code": "console.log(<s2>\"Hello, World!\"</s2>)"
+    },
+    {
+        "lang": "AppleScript",
+        "code": "<nb>say</nb> <s2>\"Hello, World!\"</s2>"
+    },
+    {
+        "lang": "AutoHotkey",
+        "code": "<o>::</o>hi<o>::</o>Hello, World!"
+    },
+    {
+        "lang": "Google Apps Script",
+        "code": "console.log(<s2>\"Hello, World!\"</s2>)"
+    },
+    {
+        "lang": "PowerShell",
+        "code": "<s1>'Hello, World!'</s1>"
+    },
+    {
+        "lang": "F#",
+        "code": "printfn <s2>\"Hello, World!\"</s2>"
+    },
+    {
+        "lang": "Myth",
+        "code": "{\"_\":\"Hello, World!\"}",
+        "href": "https://esolangs.org/wiki/Myth"
+    },
+    {
+        "lang": "Thue",
+        "code": "a::=~Hello World!\n::=\na"
+    },
+    {
+        "lang": "Ruby",
+        "code": "<nb>puts</nb> <s2>\"Hello, World!\"</s2>"
+    },
+    {
+        "lang": "Prolog",
+        "code": "<nf>main</nf>() :- <nf>write</nf>(<s2>\"Hello, World!\"</s2>), <s>nl</s>."
+    },
+    {
+        "lang": "Crystal",
+        "code": "<nb>puts</nb> <s2>\"Hello, World!\"</s2>"
+    },
+    {
+        "lang": "SQL",
+        "code": "BEGIN\ndbms_output.put_line (\"Hello, World!\");\nEND;\n/"
+    },
+    {
+        "lang": "Logo",
+        "code": "print [Hello, World!]"
+    },
+    {
+        "lang": "mq",
+        "code": "<kd>function</kd> hello(r) {\n    r.<k>return</k>(<mf>200</mf>, <s2>\"Hello, World!\"</s2>);\n}\n\n<k>export default</k> {hello};"
+    },
+    {
+        "lang": "TI-BASIC",
+        "code": "<o>:</o><vg>Disp</vg> <s2>\"Hello, World!\"</s2>"
+    },
+    {
+        "lang": "Standard ML",
+        "code": "print <s2>\"Hello, World!<se>\\n</se>\""
+    },
+    {
+        "lang": "Zig",
+        "code": "<kr>const</kr> std <o>=</o> <nb>@import</nb>(<s>\"std\"</s>);\n\n<kr>pub</kr> <k>fn</k> main() <kt>void</kt> {\n    std.debug.print(<s2>\"Hello, World!\"</s2>, .{});\n}"
+    },
+    {
+        "lang": "OCaml",
+        "code": "print_endline <s2>\"Hello, World!\"</s2>"
+    },
+    {
+        "lang": "Emojicode",
+        "code": "🏁 🍇\n    😀 🔤Hello, World!🔤❗️\n🍉"
+    },
+    {
+        "lang": "Forth",
+        "code": " <kn>:</kn> <nc>HELLO</nc>  <c1>( -- )</c1>  <k>CR</k> <s>.\" Hello, World!</s><nf>\"</nf> <k>;</k>"
+    },
+    {
+        "lang": "Emoticon",
+        "code": ":-O Hello, World! :-Q S:-P :-Q"
+    },
+    {
+        "lang": "Bloop",
+        "code": "DEFINE PROCEDURE ''HELLO-WORLD'' [N]:\nBLOCK 0: BEGIN\n    PRINT['Hello World!']\nBLOCK 0: END.\nHELLO-WORLD[1];"
+    },
+    {
+        "lang": "Node.js",
+        "code": "<kd>let sys</kd> <o>=</o> <nb>require</nb>(<s2>\"sys\"</s2>)\nsys.puts(<s2>\"Hello, World!\"</s2>)"
+    },
+    {
+        "lang": "Hack",
+        "code": "<o>&lt;&lt;</o>__EntryPoint<o>&gt;&gt;</o>\n<k>function</k> <nf>main</nf>()<o>:</o> <nx>void</nx> {\n    <k>echo</k> <s2>\"Hello, World!\"</s2>\n}"
+    },
+    {
+        "lang": "Julia",
+        "code": "<nb>print</nb>(<s2>\"Hello, World!\"</s2>)"
+    },
+    {
+        "lang": "Vala",
+        "code": "<kt>void</kt> main() {\n    <nb>print</nb>(<s2>\"Hello, World!<se>\\n</se></s2>\");\n}"
+    },
+    {
+        "lang": "Eiffel",
+        "code": "<kr>class</kr>\n    <nc>HELLO_WORLD</nc>\n<kr>create</kr>\n    make\n<kr>feature</kr>\n    make\n        <kr>do</kr>\n            print (<s2>\"Hello, World!%N\"</s2>)\n        <kr>end</kr>\n<kr>end</kr>"
+    },
+    {
+        "lang": "HolyC",
+        "code": "<kt>U0</kt> <nf>hello</nf>() {\n    <s2>\"Hello, World!<se>\\n</se>\"</s2>\n}\nhello;"
+    },
+    {
+        "lang": "YAML",
+        "code": "<nt>hello</nt>: Hello, World!"
+    },
+    {
+        "lang": "Ada",
+        "code": "<kn>with</kn> <nn>Ada.Text_IO</nn>;\n<kn>use</kn> <nn>Ada.Text_IO</nn>;\n<kd>procedure</kd> <nf>Hello</nf> <kr>is</kr>\n<kr>begin</kr>\n    Put_Line (<s2>\"Hello, World!\"</s2>);\n<kr>end</kr> <nf>Hello</nf>;"
+    },
+    {
+        "lang": "Pascal",
+        "code": "<k>program</k> HelloWorld(output)<o>;</o>\n<k>begin</k>\n    <nb>Write</nb>(<s2>\"Hello, World!\"</s2>)\n<k>end</k><o>.</o>"
+    },
+    {
+        "lang": "Whiley",
+        "code": "import * from whiley.lang.*\n\nvoid ::main(System.Console sys):\n    sys.out.println(\"Hello, World!\")"
+    },
+    {
+        "lang": "MATLAB",
+        "code": "<nb>disp</nb>(<s2>\"Hello, World!\"</s2>)"
+    },
+    {
+        "lang": "Clarion",
+        "code": "PROGRAM\n    MAP\n    END\nCODE\n    MESSAGE(\"Hello, World!\", \"Clarion\")\n    RETURN"
+    },
+    {
+        "lang": "Fjölnir", 
+        "code": "\"hello\" &lt; main\n{\n    main -&lt;\n    stef(;)\n    stofn\n        skrifastreng(;\"Hello, World!\"),\n    stofnolk\n}\n*\n\"GRUNNUR\"\n;"
+    },
+    {
+        "lang": "Befunge",
+        "code": "<s2>\"dlroW olleH\"</s2><nv>&gt;</nv><nb>:</nb><nv>v</nv>\n             <nv>^</nv><nb>,</nb><k>_@</k>"
+    },
+    {
+        "lang": "ABC",
+        "code": "WRITE \"Hello, World!\" /"
+    },
+    {
+        "lang": "Agda",
+        "code": "module hello where\n    open import IO\n    main = run (putStrLn \"Hello, World!\")"
+    },
+    {
+        "lang": "Aheui",
+        "code": "밤밣따빠밣밟따뿌\n빠맣파빨받밤뚜뭏\n돋밬탕빠맣붏두붇\n볻뫃박발뚷투뭏붖\n뫃도뫃희멓뭏뭏붘\n뫃봌토범더벌뿌뚜\n뽑뽀멓멓더벓뻐뚠\n뽀덩벐멓뻐덕더벅"
+    }
+]
