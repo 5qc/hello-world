@@ -1,0 +1,346 @@
+@use "sass:math";
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+$font: "Roboto Mono", monospace;
+$bg: #222;
+$color: #f8f8f8;
+
+i {
+    font: {
+        family: "Material Icons";
+        style: normal;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: $bg;
+    color: $color;
+    margin: 0;
+    font-family: $font;
+}
+a {
+    color: $color;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+section {
+    display: none;
+    width: 75%;
+    margin: auto;
+}
+:target {
+    display: block;
+}
+
+// Navbar Styling
+.navbar {
+    background: darken($bg, 5%);
+    color: $color;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    transition: 0.25s filter;
+    
+    .navbar-logo {
+        border-right: 1px solid rgba($color, 0.5);
+        padding: 0px 10px 0px 10px;
+        font: {
+        weight: bold;
+        size: 250%;
+        }
+    }
+    
+    .navbar-items {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0px 10px 0px 10px;
+        
+        li {
+        font-size: 150%;
+        user-select: none;
+        
+        &:not(:first-child) {
+            margin-left: 35px;
+        }
+        }
+        a {
+        color: $color;
+        text-decoration: none;
+        }
+    }
+
+    .navbar-no-click {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+.navbar-blur {
+    filter: blur(5px);
+}
+
+.search {
+    i {
+        position: fixed;
+        top: 20px;
+        left: 17px;
+        z-index: 3;
+        font-size: 200%;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    #search {
+        position: fixed;
+        top: 16px;
+        left: 15px;
+        
+        height: 25px;
+        width: 0px;
+        padding: 7px;
+        padding-left: 40px;
+        background: darken($bg, 10%);
+        color: $color;
+        font: {
+            family: $font;
+            size: 100%;
+        }
+        border: none {
+            radius: 10px;
+        }
+        transition: 0.25s width, 0.5s filter;
+        z-index: 2;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.natural-language {
+    i {
+        position: fixed;
+        top: 22px;
+        right: 17px;
+        z-index: 3;
+        font-size: 200%;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .nav {
+        position: fixed;
+        top: 55px;
+        right: 17px;
+
+        background: darken($bg, 10%);
+        width: fit-content;
+        padding: 7.5px;
+        border-radius: 10px;
+        margin: 0;
+        list-style: none;
+
+        li {
+            cursor: pointer;
+
+            &:not(:first-child) {
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+// Main
+.main {
+    .languages {
+        text-align: center;
+        
+        .item {
+        display: inline-block;
+        width: calc(100% / 6);
+        margin-top: 10px;
+        
+        &.active {
+            font-weight: bold;
+            a {
+            color: #6f6;
+            text-decoration: none;
+            }
+        }
+        }
+    }
+}
+
+// Code Styling
+.code {
+    background: #f8f9fa;
+    color: #000;
+    border: 1px solid #eaecf0;
+    padding: 1em;
+    white-space: pre-wrap;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    font-family: $font;
+    
+    nl {
+        color: #A0A000;
+    }
+    bp, nb, kp {
+        color: #008000;
+    }
+    kn, kd, kr, k, nt {
+        color: #008000;
+        font-weight: bold;
+    }
+    s2, s, s1 {
+        color: #BA2121;
+        text-decoration: none;
+    }
+    se {
+        color: #BB6622;
+        font-weight: bold;
+    }
+    cp {
+        color: #BC7A00;
+    }
+    cpf {
+        color: #408080;
+        font-style: italic;
+    }
+    kt {
+        color: #B00040;
+    }
+    nf, fm {
+        color: #0000FF;
+    }
+    o, mi {
+        color: #666666;
+    }
+    nv, vg {
+        color: #19177C;
+    }
+    c1 {
+        color: #408080;
+        font-style: italic;
+    }
+    nn, nc {
+        color: #0000FF;
+        font-weight: bold;
+    }
+    na {
+        color: #7D9029;
+    }
+    ow {
+        color: #AA22FF;
+        font-weight: bold;
+    }
+    no {
+        color: #880000;
+    }
+    ws {
+        background: #ff9999;
+    }
+    wt {
+        background: #9999ff;
+    }
+}
+
+// Style Loader
+.loader-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $bg;
+    z-index: 2;
+
+    .loader-text {
+        padding-right: 25px;
+        font: {
+            size: 300%;
+            weight: bold;
+        }
+    }
+    .loader {
+        $borderSize: calc(var(--loader-size) / 6);
+        --loader-size: 100px;
+        $loaderSize: var(--loader-size);
+
+        width: $loaderSize;
+        height: $loaderSize;
+        display: block;
+        animation: spin 2s linear infinite;
+        border: $borderSize solid darken($bg, 5%) {
+            top: $borderSize solid $color;
+            radius: 50%;
+        };
+    }
+}
+
+// Animations
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.fade-out {
+    animation: fade-out 1s ease-out both;
+}
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+// Media Resizing
+@media (max-width: 900px) {
+    .navbar {
+        .navbar-logo {
+        font-size: 150%;
+        }
+        .navbar-items {
+        font-size: 100%;
+        }
+    }
+}
+@media (max-width: 600px) {
+    .navbar {
+        .navbar-logo {
+        font-size: 125%;
+        }
+        .navbar-items {
+        font-size: 85%;
+        }
+    }
+}
