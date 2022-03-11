@@ -1,4 +1,4 @@
-window.addEventListener("load", function () {
+window.addEventListener("load", function() {
     const loader = document.querySelector(".loader-container");
     loader.className += " fade-out";
 });
@@ -12,7 +12,7 @@ let languageCodes = []
 let nlIcon = document.getElementById("nl-icon")
 let nlNav = document.getElementById("nl-nav")
 let nlNavVisibility = false
-nlIcon.onclick = function () {
+nlIcon.onclick = function() {
     if (nlNavVisibility === false) {
         nlNavVisibility = true
         nlNav.style.display = "block"
@@ -22,11 +22,14 @@ nlIcon.onclick = function () {
     }
 }
 
-request("/text.json", function () {
+request("/text.json", function() {
     let lang = "en"
 
     if (this.readyState === 4 && this.status === 200) {
         let json = JSON.parse(this.responseText)
+        json.sort(function(a, b) {
+            return a.name.localeCompare(b.name)
+        })
 
         for (let i = 0; i < json.length; i++) {
             // Variables
@@ -41,7 +44,11 @@ request("/text.json", function () {
                 document.querySelector(".navbar .navbar-logo").innerText = text[1]
                 document.getElementById("navbar-languages").innerText = text[2]
                 document.getElementById("random-language").innerText = text[3]
-                document.getElementById("search").setAttribute("placeholder", text[4])
+                document.getElementById("navbar-about").innerText = text[4]
+                document.getElementById("search").setAttribute("placeholder", text[5])
+                document.querySelector("#about-page").innerHTML = `<div class="header">${text[6]}</div>`
+                document.querySelector("#about-page").innerHTML += text[7]
+                document.querySelector("#about-page").innerHTML += `<a class="page-x" id="about-page-x" href="#">X</a>`
             }
 
             // Main Code
@@ -51,13 +58,17 @@ request("/text.json", function () {
             let text = json[i].text
 
             let langItem = document.getElementById(`nl-${json[i].lang.toLowerCase()}`)
-            langItem.onclick = function () {
+            langItem.onclick = function() {
                 document.cookie = `lang=${json[i].lang.toLowerCase()}`
                 document.title = text[0]
                 document.querySelector(".navbar .navbar-logo").innerText = text[1]
                 document.getElementById("navbar-languages").innerText = text[2]
                 document.getElementById("random-language").innerText = text[3]
-                document.getElementById("search").setAttribute("placeholder", text[4])
+                document.getElementById("navbar-about").innerText = text[4]
+                document.getElementById("search").setAttribute("placeholder", text[5])
+                document.querySelector("#about-page").innerHTML = `<div class="header">${text[6]}</div>`
+                document.querySelector("#about-page").innerHTML += text[7]
+                document.querySelector("#about-page").innerHTML += `<a class="page-x" id="about-page-x" href="#">X</a>`
             }
         }
     }
@@ -65,15 +76,15 @@ request("/text.json", function () {
 
 // Add Code Languages
 let client = new XMLHttpRequest()
-client.onreadystatechange = function () {
+client.onreadystatechange = function() {
     if (this.readyState === 4 && this.status === 200) {
         let data = JSON.parse(this.responseText)
         for (let i = 0; i < data.length; i++) {
             let languageName = data[i].lang
             let languageCode = data[i].code
 
-            languageNames.push(`<a href="#${languageName.toLowerCase()}">${languageName}</a>`)
-            languageCodes.push(`<section id="${languageName.toLowerCase()}"><pre class="code">${languageCode}</pre></section>`)
+            languageNames.push(`<a href="#${languageName.toLowerCase().replace(/ /g, "_")}">${languageName}</a>`)
+            languageCodes.push(`<section id="${languageName.toLowerCase().replace(/ /g, "_")}"><pre class="code">${languageCode}</pre></section>`)
         }
         languageNames.sort()
         languageCodes.sort()
@@ -93,7 +104,7 @@ client.onreadystatechange = function () {
             let item = items[i]
             let itemA = item.querySelector("a")
 
-            itemA.onclick = function () {
+            itemA.onclick = function() {
                 let activeLinks = document.querySelectorAll(".active")
                 for (let i = 0; i < activeLinks.length; i++) {
                     let active = activeLinks[i]
@@ -127,7 +138,7 @@ client.onreadystatechange = function () {
         }
 
         // Something
-        document.getElementById("navbar-languages").onclick = function () {
+        document.getElementById("navbar-languages").onclick = function() {
             let activeLinks = document.querySelectorAll(".active")
             for (let i = 0; i < activeLinks.length; i++) {
                 let active = activeLinks[i]
@@ -160,13 +171,13 @@ client.onreadystatechange = function () {
             let theItem = `.item-${random.lang.toLowerCase().replace(/ /g, "_").replace(/\+/g, "\\+").replace(/#/g, "\\#").replace(/\./g, "\\.").replace(/!/g, "\\!")}`
             document.querySelector(theItem).classList.add("active")
         }
-        document.getElementById("random-language").onclick = function () {
+        document.getElementById("random-language").onclick = function() {
             randomLang()
         }
 
         // Search Tool
         let searchEl = document.getElementById("search")
-        searchEl.onkeyup = function () {
+        searchEl.onkeyup = function(e) {
             let searchQ = this.value
             searchQ = searchQ.toLowerCase().replace(/ /g, "_").replace(/\+/g, "\\+").replace(/#/g, "\\#").replace(/\./g, "\\.").replace(/!/g, "\\!")
 
@@ -177,6 +188,8 @@ client.onreadystatechange = function () {
 
                     if (item.querySelector(`a[href*="${searchQ}"]`) === null) {
                         item.style.display = "none"
+                    } else {
+                        item.style.display = "inline-block"
                     }
                 }
             } else {
@@ -194,7 +207,7 @@ client.onreadystatechange = function () {
         searchEl.style.width = "0px"
         searchEl.style.padding = "0px"
         searchEl.style.paddingLeft = "0px"
-        searchIcon.onclick = function () {
+        searchIcon.onclick = function() {
             if (searchBarActive === false) {
                 searchBarActive = true
 
@@ -213,10 +226,24 @@ client.onreadystatechange = function () {
                 document.querySelector(".navbar").classList.remove("navbar-blur")
                 document.querySelector(".navbar-no-click").style.display = "none"
 
-                setTimeout(function () {
+                setTimeout(function() {
                     searchEl.style.padding = "0px"
                     searchEl.style.paddingLeft = "0px"
                 }, 250)
+            }
+        }
+
+        // Window Location Hash
+        let hash = window.location.hash.replace("#", "")
+        document.getElementById(hash).style.display = "block"
+
+        let hashClass = window.location.hash.replace("#", "").replace(/ /g, "_").replace(/\+/g, "\\+").replace(/#/g, "\\#").replace(/\./g, "\\.").replace(/!/g, "\\!")
+        document.querySelector(`.item-${hashClass}`).classList.add("active")
+
+        let hashItems = document.querySelectorAll(".item")
+        for (let i = 0; i < hashItems.length; i++) {
+            hashItems[i].onclick = function() {
+                document.getElementById(hash).style.display = ""
             }
         }
     }
