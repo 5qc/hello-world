@@ -7,7 +7,11 @@
             "Hello World Project",
             "Languages",
             "Random Language",
-            "Search for a language..."
+            "About",
+            "Search for a language...",
+
+            "About",
+            "The <b>Hello World Project</b> is a free-to-use website where you can view the phrase \"Hello, World!\" in every single programming language. We currently have <div id=\"lang-count\"></div> languages."
         ]
     }
 ]
