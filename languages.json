@@ -161,7 +161,7 @@
     },
     {
         "lang": "Visual Basic",
-        "code": "<kn>Imports</kn> System\n\n<kn>Module</kn> Module1\n    <kn>Sub</kn> <nf>Main</nf>()\n        Console.WriteLine(<s2>\"Hello, World!\"</s2>)\n     Console.ReadLine()\n    <kn>End Sub</kn>\n<kn>End Module</kn>"
+        "code": "<kn>Imports</kn> System\n\n<kn>Module</kn> Module1\n    <kn>Sub</kn> <nf>Main</nf>()\n        Console.WriteLine(<s2>\"Hello, World!\"</s2>)\n        Console.ReadLine()\n    <kn>End Sub</kn>\n<kn>End Module</kn>"
     },
     {
         "lang": "Erlang",
@@ -339,5 +339,101 @@
     {
         "lang": "Aheui",
         "code": "밤밣따빠밣밟따뿌\n빠맣파빨받밤뚜뭏\n돋밬탕빠맣붏두붇\n볻뫃박발뚷투뭏붖\n뫃도뫃희멓뭏뭏붘\n뫃봌토범더벌뿌뚜\n뽑뽀멓멓더벓뻐뚠\n뽀덩벐멓뻐덕더벅"
+    },
+    {
+        "lang": "TrumpScript",
+        "code": "<nb>say</nb> <s2>\"Hello, World!\"</s2>"
+    },
+    {
+        "lang": "Elm",
+        "code": "module HelloWorld exposing (..)\n\nImport Html exposing (text)\n\nmain =\n    text \"Hello, World!\""
+    },
+    {
+        "lang": "VBScript",
+        "code": "<nb>MsgBox</nb> <s2>\"Hello, World!\"</s2>"
+    },
+    {
+        "lang": "ZIM",
+        "code": "out \"Hello, World!\""
+    },
+    {
+        "lang": "X++",
+        "code": "class HelloWorld\n{\n}\n\nstatic void main(args Args)\n{\n    dialog   dialog;\n    ;\n    dialog = new dialog();\n    dialog.addText(\"Hello, World!\");\n    dialog.run();\n}"
+    },
+    {
+        "lang": "Xbase++",
+        "code": "func Main()\n    Qout(\"Hello, World!\")\nreturn 1"
+    },
+    {
+        "lang": "‫قلب",
+        "code": "‫(قول \"مرحبا يا عالم!\")"
+    },
+    {
+        "lang": "1C-Enterprise",
+        "code": "Message(\"Hello, World!\");"
+    },
+    {
+        "lang": "4D",
+        "code": "ALERT(\"Hello, World!\")"
+    },
+    {
+        "lang": "4Test",
+        "code": "testcase helloWorld()\n    print(\"Hello, World!\")"
+    },
+    {
+        "lang": "8th",
+        "code": "\"Hello, World!\\n\" ."
+    },
+    {
+        "lang": "ABAP4",
+        "code": "REPORT ZHB00001\nWRITE: 'Hello, World!'."
+    },
+    {
+        "lang": "Luau",
+        "code": "<nb>print</nb>(<s2>\"Hello, World!\"</s2>)"
+    },
+    {
+        "lang": "GameMonkey Script",
+        "code": "<nb>print</nb>(<s2>\"Hello, World!\"</s2>)"
+    },
+    {
+        "lang": "Io",
+        "code": "<s2>\"Hello, World!\"</s2> <nb>println</nb>"
+    },
+    {
+        "lang": "MoonScript",
+        "code": "<nb>print</nb> <s2>\"Hello, World!\"</s2>"
+    },
+    {
+        "lang": "Modula-2",
+        "code": "<kr>MODULE</kr> Hello;\n<kr>FROM</kr> STextIO <kr>IMPORT</kr> WriteString;\n<kr>BEGIN</kr>\n    WriteString(<s2>\"Hello, World!\"</s2>)\n<kr>END</kr> Hello"
+    },
+    {
+        "lang": "Modula-3",
+        "code": "<kr>MODULE</kr> Main;\n<kr>IMPORT</kr> IO;\n<kr>BEGIN</kr>\n    IO.Put(<s2>\"Hello, World!\"</s2>)\n<kr>END</kr> Main."
+    },
+    {
+        "lang": "Reason",
+        "code": "<nb>print_endline</nb>(<s2>\"Hello, World!\"</s2>)"
+    },
+    {
+        "lang": "dc",
+        "code": "<gp>$ </gp><nb>echo</nb> <s2>\"Hello, World!\"</s2> | dc"
+    },
+    {
+        "lang": "Darwin",
+        "code": "<nb>printf</nb>(<s2>\"Hello, World!<se>\\n</se>\"</s2>)"
+    },
+    {
+        "lang": "LSL",
+        "code": "<nc>default</nc>\n{\n    <nb>touch_start</nb>(<kt>integer</kt> <nv>num_detected</nv>)\n    {\n        <nf>llSay</nf>(<mi>0</mi>, <s2>\"Hello, World!\"</s2>);\n    }\n}"
+    },
+    {
+        "lang": "Groovy",
+        "code": "public class Hello {\n    public static void main(String args[]) {\n        System.out.println(<s2>\"Hello, World!\"</s2>);\n    }\n}"
+    },
+    {
+        "lang": "JScript",
+        "code": "WScript.StdOut.WriteLine(<s2>\"Hello, World!\"</s2>)"
     }
 ]
