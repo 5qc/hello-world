@@ -15,6 +15,7 @@ i {
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 body {
     background: $bg;
@@ -40,6 +41,37 @@ section {
     display: block;
 }
 
+// Pages
+.page {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 50%;
+    background: darken($bg, 5%);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+
+    .header {
+        font: {
+            weight: bold;
+            size: 200%;
+        }
+    }
+
+    &-x {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-weight: bold;
+        font-size: 150%;
+        cursor: pointer;
+        text-decoration: none;
+    }
+}
+
 // Navbar Styling
 .navbar {
     background: darken($bg, 5%);
@@ -49,8 +81,6 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: sticky;
-    top: 0px;
     transition: 0.25s filter;
     
     .navbar-logo {
@@ -97,7 +127,7 @@ section {
 
 .search {
     i {
-        position: fixed;
+        position: absolute;
         top: 20px;
         left: 17px;
         z-index: 3;
@@ -107,7 +137,7 @@ section {
     }
 
     #search {
-        position: fixed;
+        position: absolute;
         top: 16px;
         left: 15px;
         
@@ -135,7 +165,7 @@ section {
 
 .natural-language {
     i {
-        position: fixed;
+        position: absolute;
         top: 22px;
         right: 17px;
         z-index: 3;
@@ -145,7 +175,7 @@ section {
     }
 
     .nav {
-        position: fixed;
+        position: absolute;
         top: 55px;
         right: 17px;
 
@@ -172,17 +202,19 @@ section {
         text-align: center;
         
         .item {
-        display: inline-block;
-        width: calc(100% / 6);
-        margin-top: 10px;
-        
-        &.active {
-            font-weight: bold;
-            a {
-            color: #6f6;
-            text-decoration: none;
+            display: inline-block;
+            width: calc(100% / 6);
+            margin-top: 10px;
+            vertical-align: middle;
+
+            &.active {
+                font-weight: bold;
+
+                a {
+                    color: #6f6;
+                    text-decoration: none;
+                }
             }
-        }
         }
     }
 }
@@ -261,6 +293,10 @@ section {
     wt {
         background: #9999ff;
     }
+    gp {
+        color: #000080;
+        font-weight: bold;
+    }
 }
 
 // Style Loader
@@ -324,23 +360,33 @@ section {
 }
 
 // Media Resizing
+@media (max-width: 1100px) {
+    .navbar {
+        .navbar-logo {
+            font-size: 140%;
+        }
+        .navbar-items {
+            font-size: 90%;
+        }
+    }
+}
 @media (max-width: 900px) {
     .navbar {
         .navbar-logo {
-        font-size: 150%;
+            font-size: 150%;
         }
         .navbar-items {
-        font-size: 100%;
+            font-size: 100%;
         }
     }
 }
 @media (max-width: 600px) {
     .navbar {
         .navbar-logo {
-        font-size: 125%;
+            font-size: 125%;
         }
         .navbar-items {
-        font-size: 85%;
+            font-size: 85%;
         }
     }
 }
