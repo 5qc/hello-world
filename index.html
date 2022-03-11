@@ -4,11 +4,15 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/assets/favicon.svg" />
 
         <title>The Hello World Project</title>
 
         <link rel="stylesheet" href="/style.css" />
         <script src="/script.js" defer></script>
+
+        <meta name="title" content="Hello World Project" />
+        <meta name="description" content='(WIP) View "Hello, World!" programs in every single programming language.' />
     </head>
 
     <body>
@@ -24,6 +28,7 @@
             <ul class="navbar-items">
                 <li><a href="#" id="navbar-languages">Languages</a></li>
                 <li><a id="random-language">Random Language</a></li>
+                <li><a href="#about-page" id="navbar-about">About</a></li>
             </ul>
         </div>
         <div class="search">
@@ -35,10 +40,14 @@
             <ul class="nav nl-nav" id="nl-nav" style="display: none;"></ul>
         </div>
 
-        <div class="hello-world-code"></div>
+        <div class="hello-world">
+            <div class="hello-world-code"></div>
 
-        <div class="main">
-            <div class="languages"></div>
+            <div class="main">
+                <div class="languages"></div>
+            </div>
         </div>
+
+        <section id="about-page" class="page"></section>
     </body>
 </html>
